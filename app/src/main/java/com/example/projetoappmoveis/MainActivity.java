@@ -76,4 +76,14 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    @JavascriptInterface
+    public void jsShowToast(String toast, String header) {
+        new AlertDialog.Builder(this)
+                .setTitle(header)
+                .setMessage(toast)
+                .setPositiveButton(android.R.string.ok, null)
+                .create()
+                .show();
+    }
+
 }
